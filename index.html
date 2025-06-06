@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slides Presentation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="container bg-black">
+    <!-- Main slide container -->
+    <div class="slide-content padding-medium statement-style" id="slideContainer">
+        <div class="slide-text">
+            <h1 class="text-large color-gray-100 fade-transition slide-title">
+                The Evolution of Design in the AI Era
+            </h1>
+            <p class="text-medium color-gray-500 fade-transition slide-subtitle">
+                Bridges to the Future
+            </p>
+        </div>
+    </div>
+    
+    <!-- Navigation arrows at bottom -->
+    <div class="button-container padding-large">
+        <button 
+            onclick="previousSlide()" 
+            class="arrow-button"
+            id="prevButton"
+        >
+            ←
+        </button>
+        <div class="text-small color-gray-800">
+            <span id="slideCounter">1 / 29</span>
+        </div>
+        <button 
+            onclick="nextSlide()" 
+            class="arrow-button"
+            id="nextButton"
+        >
+            →
+        </button>
+    </div>
+
+    <!-- Include slide data and functionality -->
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html> 
