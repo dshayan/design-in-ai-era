@@ -1,0 +1,38 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Commit Message Generation
+
+This rule instructs the AI to generate a concise, single-line commit message at the end of its output whenever code changes are made.
+
+## Format
+
+After completing any code modifications, the AI should conclude its response with a single line in this format:
+
+```
+Commit Message: [action] [component]; [action] [component]; ...
+```
+
+## Guidelines
+
+- Use present tense verbs (Add, Update, Fix, Refactor, Remove, etc.)
+- Be specific but concise about what was changed
+- Separate multiple changes with semicolons
+- Focus on the functional impact of changes
+- No need for a commit message if only answering questions without code changes
+
+## Examples
+
+```
+Commit Message: Add user authentication service; Update README with setup instructions
+```
+
+```
+Commit Message: Fix database connection timeout; Remove deprecated API endpoints
+```
+
+```
+Commit Message: Refactor error handling in payment processor; Add unit tests
+```
