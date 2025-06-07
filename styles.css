@@ -165,7 +165,7 @@
     width: 90vw;
     max-width: none;
     height: 70vh;
-    background-color: var(--gray-900);
+    background-color: transparent;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
@@ -175,6 +175,77 @@
     width: 100%;
     height: 100%;
     border: none;
+}
+
+/* Image Style */
+.image-style {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-style .video-container {
+    background-color: transparent;
+}
+
+/* Text-Image Style */
+.text-image-style {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.text-image-style .text-half {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24px;
+}
+
+.text-image-style .image-half {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+}
+
+.text-image-style .image-half img {
+    max-width: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.text-image-style .slide-title {
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 24px;
+}
+
+.text-image-style .slide-subtitle {
+    font-weight: 400;
+    line-height: 1.4;
+    white-space: pre-line;
+}
+
+/* Responsive adjustments for text-image style */
+@media (max-width: 768px) {
+    .text-image-style {
+        flex-direction: column;
+        gap: 24px;
+    }
+    
+    .text-image-style .text-half,
+    .text-image-style .image-half {
+        flex: none;
+        width: 100%;
+    }
 }
 
 .button {

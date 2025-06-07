@@ -58,32 +58,78 @@ function updateSlide() {
     if (currentSlideData.style === 'video') {
         slideContainer.classList.add('video-style');
         
-        // Handle YouTube video ID with timestamp
-        let videoUrl = '';
-        if (currentSlideData.videoId.includes('?t=')) {
-            const [videoId, timestamp] = currentSlideData.videoId.split('?t=');
-            videoUrl = `https://www.youtube.com/embed/${videoId}?start=${timestamp}`;
+        // Check if it's a YouTube embed URL or direct video file
+        if (currentSlideData.videoUrl.includes('youtube.com/embed/')) {
+            // Handle YouTube embed URL
+            slideContainer.innerHTML = `
+                <div class="video-container fade-transition">
+                    <iframe src="${currentSlideData.videoUrl}" 
+                            class="fade-transition"
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            `;
         } else {
-            videoUrl = `https://www.youtube.com/embed/${currentSlideData.videoId}`;
+            // Handle direct video URL (MP4, WebM, etc.)
+            slideContainer.innerHTML = `
+                <div class="video-container fade-transition">
+                    <video src="${currentSlideData.videoUrl}" 
+                           class="fade-transition"
+                           controls
+                           autoplay
+                           muted
+                           style="width: 100%; height: 100%; object-fit: contain;">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            `;
         }
-        
-        slideContainer.innerHTML = `
-            <div class="video-container">
-                <iframe src="${videoUrl}" 
-                        allowfullscreen>
-                </iframe>
-            </div>
-        `;
     } else if (currentSlideData.style === 'gif') {
         slideContainer.classList.add('video-style');
         
         slideContainer.innerHTML = `
-            <div class="video-container">
+            <div class="video-container fade-transition">
                 <img src="${currentSlideData.gifUrl}" 
                      alt="GIF Animation"
+                     class="fade-transition"
                      style="width: 100%; height: 100%; object-fit: contain;">
             </div>
         `;
+    } else if (currentSlideData.style === 'image') {
+        slideContainer.classList.add('image-style');
+        
+        slideContainer.innerHTML = `
+            <div class="video-container fade-transition">
+                <img src="${currentSlideData.imageUrl}" 
+                     alt="${currentSlideData.title || 'Slide Image'}"
+                     class="fade-transition"
+                     style="width: 100%; height: 100%; object-fit: contain;">
+            </div>
+        `;
+    } else if (currentSlideData.style === 'text-image') {
+        slideContainer.classList.add('text-image-style');
+        
+        // Determine order based on imagePosition property (default: 'right')
+        const imagePosition = currentSlideData.imagePosition || 'right';
+        const textHalf = `
+            <div class="text-half fade-transition">
+                <h1 class="text-large color-gray-100 slide-title">${currentSlideData.title}</h1>
+                <p class="text-medium color-gray-500 slide-subtitle">${currentSlideData.subtitle}</p>
+            </div>
+        `;
+        const imageHalf = `
+            <div class="image-half fade-transition">
+                <img src="${currentSlideData.imageUrl}" 
+                     alt="${currentSlideData.title || 'Slide Image'}"
+                     class="fade-transition">
+            </div>
+        `;
+        
+        if (imagePosition === 'left') {
+            slideContainer.innerHTML = imageHalf + textHalf;
+        } else {
+            slideContainer.innerHTML = textHalf + imageHalf;
+        }
     } else {
         // Default to statement style
         slideContainer.classList.add('statement-style');
