@@ -107,7 +107,7 @@ const slides = [
     {
         style: "statement",
         title: "Beyond Chat",
-        subtitle: "Physics-based UIs with depth\nMore personalized UX\nGenerative interfaces that adapt"
+        subtitle: "Physics-based UIs with depth\nPersonalized experiences with memory\nGenerative interfaces that adapt"
     },
     {
         style: "statement",
