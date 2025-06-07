@@ -6,6 +6,7 @@
     --black: #000000;
     --white: #ffffff;
     --gray-100: #f5f5f5;
+    --gray-200: #eeeeee;
     --gray-400: #bdbdbd;
     --gray-500: #9e9e9e;
     --gray-600: #757575;
@@ -19,6 +20,7 @@
     --text-secondary: var(--gray-800);
     --text-muted: var(--gray-500);
     --text-subtitle: var(--gray-600);
+    --text-navigation: var(--gray-200);
     --border-color: var(--gray-500);
     --shadow-color: rgba(0, 0, 0, 0.05);
     --video-shadow: rgba(0, 0, 0, 0.15);
@@ -32,6 +34,7 @@
     --text-secondary: var(--gray-500);
     --text-muted: var(--gray-800);
     --text-subtitle: var(--gray-400);
+    --text-navigation: var(--gray-900);
     --border-color: var(--gray-800);
     --shadow-color: rgba(255, 255, 255, 0.03);
     --video-shadow: rgba(0, 0, 0, 0.25);
@@ -110,7 +113,7 @@ body {
 }
 
 .color-gray-800 {
-    color: var(--text-secondary);
+    color: var(--text-navigation);
 }
 
 /* Background colors */
@@ -310,7 +313,7 @@ body {
 .arrow-button {
     background: none;
     border: none;
-    color: var(--text-secondary);
+    color: var(--text-navigation);
     cursor: pointer;
     width: 24px;
     height: 24px;
