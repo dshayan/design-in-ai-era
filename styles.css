@@ -15,27 +15,19 @@
     
     /* Theme colors - Light Mode */
     --bg-primary: var(--white);
-    --bg-secondary: var(--gray-100);
     --text-primary: var(--gray-900);
     --text-secondary: var(--gray-600);
     --text-muted: var(--gray-100);
     --text-navigation: var(--gray-200);
-    --border-color: var(--gray-500);
-    --shadow-color: rgba(0, 0, 0, 0.05);
-    --video-shadow: rgba(0, 0, 0, 0.15);
 }
 
 /* Dark Mode */
 [data-theme="dark"] {
     --bg-primary: var(--black);
-    --bg-secondary: var(--gray-900);
     --text-primary: var(--gray-100);
     --text-secondary: var(--gray-400);
     --text-muted: var(--gray-900);
     --text-navigation: var(--gray-800);
-    --border-color: var(--gray-800);
-    --shadow-color: rgba(255, 255, 255, 0.03);
-    --video-shadow: rgba(0, 0, 0, 0.25);
 }
 
 /* Base body styling */
