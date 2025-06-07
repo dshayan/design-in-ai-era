@@ -6,24 +6,26 @@ function initializeTheme() {
     const savedTheme = localStorage.getItem('theme') || 'dark';
     const body = document.body;
     const themeToggle = document.getElementById('themeToggle');
+    const icon = themeToggle.querySelector('.material-symbols-outlined');
     
     body.setAttribute('data-theme', savedTheme);
     
-    // Update icon based on current theme
-    themeToggle.textContent = savedTheme === 'dark' ? '🌙' : '☀️';
+    // Update icon to show the theme you can switch TO
+    icon.textContent = savedTheme === 'dark' ? 'light_mode' : 'dark_mode';
 }
 
 function toggleTheme() {
     const body = document.body;
     const themeToggle = document.getElementById('themeToggle');
+    const icon = themeToggle.querySelector('.material-symbols-outlined');
     const currentTheme = body.getAttribute('data-theme');
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
     
     body.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
     
-    // Update icon based on new theme
-    themeToggle.textContent = newTheme === 'dark' ? '🌙' : '☀️';
+    // Update icon to show the theme you can switch TO
+    icon.textContent = newTheme === 'dark' ? 'light_mode' : 'dark_mode';
     
     // Update current slide to reflect theme change
     updateSlide();
