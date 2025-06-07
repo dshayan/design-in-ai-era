@@ -1,7 +1,7 @@
 /* Import IBM Plex Mono font */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap');
 
-/* Color Variables */
+/* Color Variables - Light Mode (Default) */
 :root {
     --black: #000000;
     --white: #ffffff;
@@ -9,6 +9,62 @@
     --gray-500: #9e9e9e;
     --gray-800: #424242;
     --gray-900: #212121;
+    
+    /* Theme colors - Light Mode */
+    --bg-primary: var(--white);
+    --bg-secondary: var(--gray-100);
+    --text-primary: var(--gray-900);
+    --text-secondary: var(--gray-800);
+    --text-muted: var(--gray-500);
+    --border-color: var(--gray-500);
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --video-shadow: rgba(0, 0, 0, 0.3);
+}
+
+/* Dark Mode */
+[data-theme="dark"] {
+    --bg-primary: var(--black);
+    --bg-secondary: var(--gray-900);
+    --text-primary: var(--gray-100);
+    --text-secondary: var(--gray-500);
+    --text-muted: var(--gray-800);
+    --border-color: var(--gray-800);
+    --shadow-color: rgba(255, 255, 255, 0.1);
+    --video-shadow: rgba(0, 0, 0, 0.5);
+}
+
+/* Base body styling */
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Theme Toggle Switch */
+.theme-toggle {
+    position: fixed;
+    top: 24px;
+    right: 24px; /* Same margin as arrow button padding */
+    z-index: 1000;
+    background: none;
+    border: none;
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 24px;
+    transition: all 0.3s ease;
+    user-select: none;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-toggle:hover {
+    color: var(--text-primary);
+    transform: scale(1.1);
 }
 
 /* Font Sizes */
@@ -79,44 +135,44 @@
 }
 
 .color-gray-100 {
-    color: var(--gray-100);
+    color: var(--text-primary);
 }
 
 .color-gray-500 {
-    color: var(--gray-500);
+    color: var(--text-muted);
 }
 
 .color-gray-800 {
-    color: var(--gray-800);
+    color: var(--text-secondary);
 }
 
 .color-gray-900 {
-    color: var(--gray-900);
+    color: var(--text-primary);
 }
 
 /* Background colors */
 .bg-white {
-    background-color: var(--white);
+    background-color: var(--bg-primary);
 }
 
 .bg-black {
-    background-color: var(--black);
+    background-color: var(--bg-primary);
 }
 
 .bg-gray-100 {
-    background-color: var(--gray-100);
+    background-color: var(--bg-secondary);
 }
 
 .bg-gray-500 {
-    background-color: var(--gray-500);
+    background-color: var(--border-color);
 }
 
 .bg-gray-800 {
-    background-color: var(--gray-800);
+    background-color: var(--text-secondary);
 }
 
 .bg-gray-900 {
-    background-color: var(--gray-900);
+    background-color: var(--bg-secondary);
 }
 
 /* Additional utility classes using the defined styles */
@@ -162,19 +218,41 @@
 }
 
 .video-container {
-    width: 90vw;
-    max-width: none;
-    height: 70vh;
+    max-width: 90vw;
+    max-height: 70vh;
+    width: fit-content;
+    height: fit-content;
     background-color: transparent;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 32px var(--video-shadow);
 }
 
 .video-container iframe {
     width: 100%;
     height: 100%;
     border: none;
+    min-width: 960px;
+    min-height: 540px;
+}
+
+.video-container video {
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 960px;
+    min-height: 540px;
+    width: auto;
+    height: auto;
+}
+
+.video-container img {
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 960px;
+    min-height: 540px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
 }
 
 /* Image Style */
@@ -217,9 +295,11 @@
 .text-image-style .image-half img {
     max-width: 100%;
     max-height: 70vh;
+    width: auto;
+    height: auto;
     object-fit: contain;
     border-radius: 12px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 32px var(--shadow-color);
 }
 
 .text-image-style .slide-title {
@@ -248,9 +328,36 @@
     }
 }
 
+/* Responsive adjustments for video and image containers */
+@media (max-width: 768px) {
+    .video-container video,
+    .video-container img {
+        min-width: 480px;
+        min-height: 270px;
+    }
+    
+    .video-container iframe {
+        min-width: 480px;
+        min-height: 270px;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-container video,
+    .video-container img {
+        min-width: 300px;
+        min-height: 169px;
+    }
+    
+    .video-container iframe {
+        min-width: 300px;
+        min-height: 169px;
+    }
+}
+
 .button {
-    background-color: var(--gray-500);
-    color: var(--gray-100);
+    background-color: var(--border-color);
+    color: var(--text-primary);
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -259,8 +366,8 @@
 }
 
 .button:hover {
-    background-color: var(--gray-100);
-    color: var(--gray-900);
+    background-color: var(--text-primary);
+    color: var(--bg-primary);
     transform: scale(1.05);
 }
 
@@ -268,26 +375,33 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .arrow-button {
     background: none;
     border: none;
-    color: var(--gray-800);
+    color: var(--text-secondary);
     cursor: pointer;
-    font-size: 32px;
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
+    line-height: 1;
     font-family: 'IBM Plex Mono', monospace;
     transition: all 0.3s ease;
     padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .arrow-button:hover {
-    color: var(--gray-100);
+    color: var(--text-primary);
     transform: scale(1.1);
 }
 
 .arrow-button:disabled {
-    color: var(--gray-900);
+    color: var(--text-muted);
     cursor: not-allowed;
     transform: none;
 }

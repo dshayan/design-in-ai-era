@@ -1,6 +1,31 @@
 // Slide presentation functionality
 let currentSlide = 0;
 
+// Theme management
+function initializeTheme() {
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    const body = document.body;
+    const themeToggle = document.getElementById('themeToggle');
+    
+    body.setAttribute('data-theme', savedTheme);
+    
+    // Update icon based on current theme
+    themeToggle.textContent = savedTheme === 'dark' ? '🌙' : '☀️';
+}
+
+function toggleTheme() {
+    const body = document.body;
+    const themeToggle = document.getElementById('themeToggle');
+    const currentTheme = body.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    
+    body.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    
+    // Update icon based on new theme
+    themeToggle.textContent = newTheme === 'dark' ? '🌙' : '☀️';
+}
+
 // Navigation functions
 function nextSlide() {
     if (currentSlide < slides.length - 1) {
@@ -50,6 +75,12 @@ function updateSlide() {
     prevButton.disabled = currentSlide === 0;
     nextButton.disabled = currentSlide === slides.length - 1;
     
+    // Show/hide theme toggle based on current slide
+    const themeToggle = document.querySelector('.theme-toggle');
+    if (themeToggle) {
+        themeToggle.style.display = currentSlide === 0 ? 'flex' : 'none';
+    }
+    
     // Clear existing content and styles
     slideContainer.className = 'slide-content padding-medium';
     slideContainer.innerHTML = '';
@@ -77,8 +108,7 @@ function updateSlide() {
                            class="fade-transition"
                            controls
                            autoplay
-                           muted
-                           style="width: 100%; height: 100%; object-fit: contain;">
+                           muted>
                         Your browser does not support the video tag.
                     </video>
                 </div>
@@ -91,8 +121,7 @@ function updateSlide() {
             <div class="video-container fade-transition">
                 <img src="${currentSlideData.gifUrl}" 
                      alt="GIF Animation"
-                     class="fade-transition"
-                     style="width: 100%; height: 100%; object-fit: contain;">
+                     class="fade-transition">
             </div>
         `;
     } else if (currentSlideData.style === 'image') {
@@ -102,8 +131,7 @@ function updateSlide() {
             <div class="video-container fade-transition">
                 <img src="${currentSlideData.imageUrl}" 
                      alt="${currentSlideData.title || 'Slide Image'}"
-                     class="fade-transition"
-                     style="width: 100%; height: 100%; object-fit: contain;">
+                     class="fade-transition">
             </div>
         `;
     } else if (currentSlideData.style === 'text-image') {
@@ -152,9 +180,17 @@ function updateSlide() {
 
 // Event listeners and initialization
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize theme
+    initializeTheme();
+    
+    // Initialize slides
     currentSlide = getSlideFromURL();
     updateSlide();
     updateURL();
+    
+    // Add theme toggle event listener
+    const themeToggle = document.getElementById('themeToggle');
+    themeToggle.addEventListener('click', toggleTheme);
 });
 
 // Keyboard navigation
