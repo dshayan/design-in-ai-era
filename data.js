@@ -126,7 +126,8 @@ const slides = [
     {
         style: "statement",
         title: "Real Examples",
-        subtitle: "Designer wrote first system prompt for Figma Make\nI coded this presentation faster than using Figma"
+        subtitle: "Designer wrote first system prompt for Figma Make\nI coded this presentation faster than using Figma",
+        background: "floating-circles"
     },
     {
         style: "statement",
@@ -143,11 +144,6 @@ const slides = [
         title: "",
         subtitle: "",
         videoUrl: "https://www.youtube.com/embed/HKk972fTfkk?start=40"
-    },
-    {
-        style: "statement",
-        title: "Human-Centered Reasoning",
-        subtitle: "You can often reason about AI\nthe way you would reason about another human"
     },
     {
         style: "statement",

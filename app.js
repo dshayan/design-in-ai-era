@@ -100,6 +100,28 @@ function updateSlide() {
     slideContainer.className = 'slide-content padding-medium';
     slideContainer.innerHTML = '';
     
+    // Add background if specified
+    if (currentSlideData.background === 'floating-circles') {
+        slideContainer.style.position = 'relative';
+        slideContainer.style.overflow = 'hidden';
+        const backgroundDiv = document.createElement('div');
+        backgroundDiv.className = 'floating-circles-bg';
+        backgroundDiv.innerHTML = `
+            <div class="floating-circle"></div>
+            <div class="floating-circle"></div>
+            <div class="floating-circle"></div>
+            <div class="floating-circle"></div>
+            <div class="floating-circle"></div>
+            <div class="floating-circle"></div>
+            <div class="floating-circle"></div>
+        `;
+        slideContainer.appendChild(backgroundDiv);
+        console.log('Added floating circles background');
+    } else {
+        slideContainer.style.position = '';
+        slideContainer.style.overflow = '';
+    }
+    
     // Add appropriate style class and content
     if (currentSlideData.style === 'video') {
         slideContainer.classList.add('video-style');
@@ -178,12 +200,15 @@ function updateSlide() {
     } else {
         // Default to statement style
         slideContainer.classList.add('statement-style');
-        slideContainer.innerHTML = `
-            <div class="slide-text">
-                <h1 class="text-large color-gray-100 fade-transition slide-title">${currentSlideData.title}</h1>
-                <p class="text-medium color-gray-500 fade-transition slide-subtitle">${currentSlideData.subtitle}</p>
-            </div>
+        const contentDiv = document.createElement('div');
+        contentDiv.className = 'slide-text';
+        contentDiv.style.position = 'relative';
+        contentDiv.style.zIndex = '10';
+        contentDiv.innerHTML = `
+            <h1 class="text-large color-gray-100 fade-transition slide-title">${currentSlideData.title}</h1>
+            <p class="text-medium color-gray-500 fade-transition slide-subtitle">${currentSlideData.subtitle}</p>
         `;
+        slideContainer.appendChild(contentDiv);
     }
     
     // Add slide transition effect
