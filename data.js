@@ -8,7 +8,7 @@ const slides = [
     {
         style: "statement",
         title: "AI is Already Transforming Design",
-        subtitle: "89% of designers say AI improved workflow\nStartups adopt 2x faster\nTool fatigue is real"
+        subtitle: "89% of designers say AI improved their workflow\nStartups adopt 2x faster\nTool fatigue is real"
     },
     {
         style: "text-image",
@@ -76,7 +76,7 @@ const slides = [
     {
         style: "text-image",
         title: "The Case for Chat",
-        subtitle: "How we naturally communicate\nMaximum flexibility\nHandles any type of interaction",
+        subtitle: "It's how we naturally communicate\nMaximum flexibility\nHandles any type of interaction",
         imageUrl: {
             light: "assets/kevin-weil.png",
             dark: "assets/kevin-weil.png"
@@ -86,7 +86,7 @@ const slides = [
     {
         style: "text-image",
         title: "The Case Against Chat",
-        subtitle: "Blank page intimidates users\nHard to refine and iterate\nTyping is slow, limited\nDoesn't know what it doesn't know",
+        subtitle: "Blank page intimidates users\nHard to refine and iterate\nTyping is slow and limited\nDoesn't know what it doesn't know",
         imageUrl: {
             light: "assets/julie-zhuo.png",
             dark: "assets/julie-zhuo.png"
@@ -133,7 +133,7 @@ const slides = [
     {
         style: "statement",
         title: "Real Cases",
-        subtitle: "A designer wrote first system prompt for Figma Make\nI coded this presentation faster than using Figma!",
+        subtitle: "A designer wrote the first system prompt for Figma Make\nI coded this presentation faster than using Figma!",
         background: "floating-circles"
     },
     {
@@ -172,7 +172,7 @@ const slides = [
     {
         style: "statement",
         title: "Key Takeaways",
-        subtitle: "Focus on unique value; Use AI for the rest\nRethink interaction models\nMeanwhile use chat & specialized interfaces\nPrototype early and often\nDon't forget about UX principles"
+        subtitle: "Focus on unique value; use AI for the rest\nRethink interaction models\nMeanwhile, use chat & specialized interfaces\nPrototype early and often\nDon't forget about UX principles"
     },
     {
         style: "statement",
