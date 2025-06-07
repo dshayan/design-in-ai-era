@@ -8,7 +8,7 @@ const slides = [
     {
         style: "statement",
         title: "AI is Already Transforming Design",
-        subtitle: "89% say AI improved workflow\nStartups adopt 2x faster\nTool fatigue is real"
+        subtitle: "89% of designers say AI improved workflow\nStartups adopt 2x faster\nTool fatigue is real"
     },
     {
         style: "statement",
@@ -74,7 +74,7 @@ const slides = [
     {
         style: "text-image",
         title: "The Case for Chat",
-        subtitle: "Universal communication method\nMaximum bandwidth\nFirst models to understand human speech complexity",
+        subtitle: "How we naturally communicate\nMaximum flexibility\nHandles any type of interaction",
         imageUrl: {
             light: "assets/kevin-weil.png",
             dark: "assets/kevin-weil.png"
@@ -84,7 +84,7 @@ const slides = [
     {
         style: "text-image",
         title: "The Case Against Chat",
-        subtitle: "Blank page problem\nIteration challenges\nInput-output mismatch\nScoping limitations",
+        subtitle: "Blank page intimidates users\nHard to refine and iterate\nTyping is slow, limited\nDoesn't know what it doesn't know",
         imageUrl: {
             light: "assets/julie-zhuo.png",
             dark: "assets/julie-zhuo.png"
@@ -94,7 +94,7 @@ const slides = [
     {
         style: "statement",
         title: "The Nuanced Reality",
-        subtitle: "Chat as baseline +\nspecialized interfaces for specific tasks"
+        subtitle: "Chat as baseline\nPlus specialized interfaces for specific tasks"
     },
     {
         style: "video",
