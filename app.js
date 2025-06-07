@@ -24,6 +24,19 @@ function toggleTheme() {
     
     // Update icon based on new theme
     themeToggle.textContent = newTheme === 'dark' ? '🌙' : '☀️';
+    
+    // Update current slide to reflect theme change
+    updateSlide();
+}
+
+// Helper function to get the appropriate image URL based on current theme
+function getImageUrl(imageUrl) {
+    if (typeof imageUrl === 'string') {
+        return imageUrl; // Backward compatibility for single images
+    }
+    
+    const currentTheme = document.body.getAttribute('data-theme') || 'dark';
+    return imageUrl[currentTheme] || imageUrl.dark || imageUrl.light;
 }
 
 // Navigation functions
@@ -127,9 +140,10 @@ function updateSlide() {
     } else if (currentSlideData.style === 'image') {
         slideContainer.classList.add('image-style');
         
+        const imageUrl = getImageUrl(currentSlideData.imageUrl);
         slideContainer.innerHTML = `
             <div class="video-container fade-transition">
-                <img src="${currentSlideData.imageUrl}" 
+                <img src="${imageUrl}" 
                      alt="${currentSlideData.title || 'Slide Image'}"
                      class="fade-transition">
             </div>
@@ -145,9 +159,10 @@ function updateSlide() {
                 <p class="text-medium color-gray-500 slide-subtitle">${currentSlideData.subtitle}</p>
             </div>
         `;
+        const imageUrl = getImageUrl(currentSlideData.imageUrl);
         const imageHalf = `
             <div class="image-half fade-transition">
-                <img src="${currentSlideData.imageUrl}" 
+                <img src="${imageUrl}" 
                      alt="${currentSlideData.title || 'Slide Image'}"
                      class="fade-transition">
             </div>

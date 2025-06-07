@@ -14,7 +14,10 @@ const slides = [
         style: "image",
         title: "The Bridge Mechanism",
         subtitle: "",
-        imageUrl: "assets/paradigms.png"
+        imageUrl: {
+            light: "assets/paradigms-light.png",
+            dark: "assets/paradigms.png"
+        }
     },
     {
         style: "statement",
@@ -35,7 +38,10 @@ const slides = [
         style: "image",
         title: "",
         subtitle: "",
-        imageUrl: "assets/creation-stats.png"
+        imageUrl: {
+            light: "assets/creation-stats-light.png",
+            dark: "assets/creation-stats.png"
+        }
     },
     {
         style: "statement",
@@ -63,14 +69,20 @@ const slides = [
         style: "text-image",
         title: "The Case for Chat",
         subtitle: "Universal communication method\nMaximum bandwidth\nFirst models to understand human speech complexity",
-        imageUrl: "assets/kevin-weil.png",
+        imageUrl: {
+            light: "assets/kevin-weil.png",
+            dark: "assets/kevin-weil.png"
+        },
         imagePosition: "right"
     },
     {
         style: "text-image",
         title: "The Case Against Chat",
         subtitle: "Blank page problem\nIteration challenges\nInput-output mismatch\nScoping limitations",
-        imageUrl: "assets/julie-zhuo.png",
+        imageUrl: {
+            light: "assets/julie-zhuo.png",
+            dark: "assets/julie-zhuo.png"
+        },
         imagePosition: "left"
     },
     {
