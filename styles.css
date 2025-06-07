@@ -1,5 +1,5 @@
-/* Import IBM Plex Mono font */
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap');
+/* Import Montserrat font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 /* Color Variables - Light Mode (Default) */
 :root {
@@ -77,17 +77,17 @@ body {
 /* Font Sizes */
 .text-small {
     font-size: 18px;
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .text-medium {
     font-size: 32px;
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .text-large {
     font-size: 48px;
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* Padding classes */
@@ -317,7 +317,7 @@ body {
     height: 24px;
     font-size: 24px;
     line-height: 1;
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
     transition: all 0.3s ease;
     padding: 24px;
     display: flex;
