@@ -113,9 +113,20 @@ const slides = [
         subtitle: "\"Demos before memos\"\nFaster path from idea to experience"
     },
     {
+        style: "video",
+        title: "",
+        subtitle: "",
+        videoUrl: "https://www.youtube.com/embed/dl0CbKYUFTY?start=107"
+    },
+    {
         style: "statement",
         title: "This Now Applies to Design",
-        subtitle: "Let AI handle the common work\nFocus on what makes your product unique"
+        subtitle: "Let AI handle the common work\nFocus on what makes your product unique\nEvals are the new PRDs"
+    },
+    {
+        style: "statement",
+        title: "Real Examples",
+        subtitle: "Designer wrote first system prompt for Figma Make\nI coded this presentation faster than using Figma"
     },
     {
         style: "statement",
@@ -142,12 +153,6 @@ const slides = [
         style: "statement",
         title: "The Ceiling is Still Human",
         subtitle: "AI is great for getting started,\nbut not always for crossing the finish line"
-    },
-    {
-        style: "video",
-        title: "",
-        subtitle: "",
-        videoUrl: "https://www.youtube.com/embed/dl0CbKYUFTY?start=107"
     },
     {
         style: "statement",
