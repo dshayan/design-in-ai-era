@@ -308,6 +308,12 @@ body {
     position: relative;
 }
 
+.navigation-group {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
 .arrow-button {
     background: none;
     border: none;
