@@ -130,14 +130,21 @@ const slides = [
     },
     {
         style: "statement",
-        title: "Real Examples",
-        subtitle: "Designer wrote first system prompt for Figma Make\nI coded this presentation faster than using Figma",
+        title: "Real Cases",
+        subtitle: "A designer wrote first system prompt for Figma Make\nI coded this presentation faster than using Figma!",
         background: "floating-circles"
     },
     {
         style: "statement",
         title: "What Remains Constant",
         subtitle: "Technology changes, human needs don't\nGood design is still about understanding users"
+    },
+    {
+        style: "text-image",
+        title: "10 Usability Heuristics for User Interface Design",
+        subtitle: "",
+        imageUrl: "assets/heuristics.png",
+        imagePosition: "right"
     },
     {
         style: "statement",
