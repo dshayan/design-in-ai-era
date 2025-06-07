@@ -25,8 +25,14 @@ const slides = [
         subtitle: "Not just adding AI features,\nbut rethinking interaction models entirely"
     },
     {
+        style: "image",
+        title: "",
+        subtitle: "",
+        imageUrl: "assets/sam-jony.png"
+    },
+    {
         style: "statement",
-        title: "The Designer Reality Check",
+        title: "Design's current state",
         subtitle: "89% say AI improved workflow\nStartups adopt 2x faster\nTool fatigue is real"
     },
     {
