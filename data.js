@@ -168,6 +168,6 @@ const slides = [
     {
         style: "statement",
         title: "Thank You",
-        subtitle: "Questions & Discussion"
+        subtitle: ""
     }
 ]; 
