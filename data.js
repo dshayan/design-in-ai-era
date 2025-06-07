@@ -69,7 +69,7 @@ const slides = [
     {
         style: "statement",
         title: "Is Chat the New Interface?",
-        subtitle: "\"Chat is an amazing interface because it's so versatile.\" — Kevin Weil, OpenAI CPO"
+        subtitle: "\"Chat is an amazing interface because it's so versatile.\"\n— Kevin Weil, OpenAI CPO"
     },
     {
         style: "text-image",
@@ -113,25 +113,13 @@ const slides = [
         subtitle: "\"Demos before memos\"\nFaster path from idea to experience"
     },
     {
-        style: "video",
-        title: "",
-        subtitle: "",
-        videoUrl: "https://www.youtube.com/embed/dl0CbKYUFTY?start=107"
-    },
-    {
         style: "statement",
         title: "This Now Applies to Design",
         subtitle: "Let AI handle the common work\nFocus on what makes your product unique"
     },
-
     {
         style: "statement",
         title: "What Remains Constant",
-        subtitle: "Core UX principles still apply"
-    },
-    {
-        style: "statement",
-        title: "The Fundamental Truth",
         subtitle: "Technology changes, human needs don't\nGood design is still about understanding users"
     },
     {
@@ -153,7 +141,13 @@ const slides = [
     {
         style: "statement",
         title: "The Ceiling is Still Human",
-        subtitle: "AI is great for getting started,\nbut not always for crossing the finish line\nThe last 40% belongs to human hands"
+        subtitle: "AI is great for getting started,\nbut not always for crossing the finish line"
+    },
+    {
+        style: "video",
+        title: "",
+        subtitle: "",
+        videoUrl: "https://www.youtube.com/embed/dl0CbKYUFTY?start=107"
     },
     {
         style: "statement",
