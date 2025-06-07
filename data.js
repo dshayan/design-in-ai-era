@@ -3,7 +3,31 @@ const slides = [
     {
         style: "statement",
         title: "The Evolution of Design in the AI Era",
-        subtitle: "Shayan Mehrdoost, For Divar"
+        subtitle: "Shayan Mehrdoost"
+    },
+    {
+        style: "statement",
+        title: "AI is Already Transforming Design",
+        subtitle: "89% say AI improved workflow\nStartups adopt 2x faster\nTool fatigue is real"
+    },
+    {
+        style: "statement",
+        title: "Adoption Follows a Pattern",
+        subtitle: "Exploration: 84%\nCreation: 68%\nDelivery: 39%"
+    },
+    {
+        style: "image",
+        title: "",
+        subtitle: "",
+        imageUrl: {
+            light: "assets/creation-stats-light.png",
+            dark: "assets/creation-stats.png"
+        }
+    },
+    {
+        style: "statement",
+        title: "We're in a Paradigm Shift",
+        subtitle: "Not just adding AI features,\nbut rethinking interaction models entirely"
     },
     {
         style: "statement",
@@ -20,34 +44,10 @@ const slides = [
         }
     },
     {
-        style: "statement",
-        title: "We're in a Paradigm Shift",
-        subtitle: "Not just adding AI features,\nbut rethinking interaction models entirely"
-    },
-    {
         style: "image",
         title: "",
         subtitle: "",
         imageUrl: "assets/sam-jony.png"
-    },
-    {
-        style: "statement",
-        title: "Design's Current State",
-        subtitle: "89% say AI improved workflow\nStartups adopt 2x faster\nTool fatigue is real"
-    },
-    {
-        style: "statement",
-        title: "Adoption Phases",
-        subtitle: "Exploration: 84%\nCreation: 68%\nDelivery: 39%"
-    },
-    {
-        style: "image",
-        title: "",
-        subtitle: "",
-        imageUrl: {
-            light: "assets/creation-stats-light.png",
-            dark: "assets/creation-stats.png"
-        }
     },
     {
         style: "statement",
