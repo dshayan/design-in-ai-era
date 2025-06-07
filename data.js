@@ -104,7 +104,12 @@ const slides = [
     },
     {
         style: "statement",
-        title: "The New Design Workflow",
+        title: "Beyond Chat",
+        subtitle: "Physics-based UIs with depth\nMore personalized UX\nGenerative interfaces that adapt"
+    },
+    {
+        style: "statement",
+        title: "The New Workflow",
         subtitle: "\"If you're not prototyping to see what you want to build, you're doing it wrong.\"\n— Aparna Chennapragada, Microsoft CPO"
     },
     {
