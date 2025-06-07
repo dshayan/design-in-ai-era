@@ -129,12 +129,17 @@ body {
     justify-content: center;
     text-align: left;
     max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
+    padding: 0 24px;
+    box-sizing: border-box;
 }
 
 .slide-text {
-    width: 900px;
+    width: 100%;
+    max-width: 900px;
     text-align: left;
+    padding: 0 24px;
 }
 
 /* Statement Style - Default slide style */
@@ -290,6 +295,51 @@ body {
     .video-container iframe {
         min-width: 300px;
         min-height: 169px;
+    }
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+    .text-large {
+        font-size: 36px;
+    }
+    
+    .text-medium {
+        font-size: 28px;
+    }
+    
+    .slide-text {
+        padding: 0 16px;
+    }
+    
+    .slide-content {
+        padding: 0 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-large {
+        font-size: 28px;
+    }
+    
+    .text-medium {
+        font-size: 24px;
+    }
+    
+    .text-small {
+        font-size: 16px;
+    }
+    
+    .slide-text {
+        padding: 0 12px;
+    }
+    
+    .slide-content {
+        padding: 0 12px;
+    }
+    
+    .statement-style .slide-title {
+        margin-bottom: 24px;
     }
 }
 
