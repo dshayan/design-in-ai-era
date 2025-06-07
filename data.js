@@ -32,7 +32,7 @@ const slides = [
     },
     {
         style: "statement",
-        title: "Design's current state",
+        title: "Design's Current State",
         subtitle: "89% say AI improved workflow\nStartups adopt 2x faster\nTool fatigue is real"
     },
     {
@@ -163,7 +163,7 @@ const slides = [
     {
         style: "statement",
         title: "Key Takeaways",
-        subtitle: "Prototype early and often\nFocus on unique value; Use AI for the rest\nRethink interaction models\nMeanwhile use chat & specialized interfaces\nDon't forget about UX principles"
+        subtitle: "Focus on unique value; Use AI for the rest\nRethink interaction models\nMeanwhile use chat & specialized interfaces\nPrototype early and often\nDon't forget about UX principles"
     },
     {
         style: "statement",
