@@ -11,9 +11,11 @@ const slides = [
         subtitle: "89% of designers say AI improved workflow\nStartups adopt 2x faster\nTool fatigue is real"
     },
     {
-        style: "statement",
+        style: "text-image",
         title: "Adoption Follows a Pattern",
-        subtitle: "Exploration: 84%\nCreation: 68%\nDelivery: 39%"
+        subtitle: "Exploration: 84%\nCreation: 68%\nDelivery: 39%",
+        imageUrl: "assets/state-of-design.png",
+        imagePosition: "right"
     },
     {
         style: "image",
